@@ -71,7 +71,7 @@
           </v-card-text>
           <v-card-actions class="btn">
             <div >
-              <v-btn rounded color="primary" @click="goToCheckout()">
+              <v-btn rounded class="btn" color="primary" @click="goToCheckout()">
                 ไปชำระเงิน
               </v-btn>
             </div>
@@ -95,24 +95,6 @@ export default {
             number: 1,
             totolPrice: 499.00
           },
-          // {
-          //   name: 'Ice cream sandwich',
-          //   price: 237,
-          //   number: 2,
-          //   totolPrice: 599
-          // },
-          // {
-          //   name: 'Eclair',
-          //   price: 262,
-          //   number: 5,
-          //   totolPrice: 399
-          // },
-          // {
-          //   name: 'Cupcake',
-          //   price: 305,
-          //   number: 3,
-          //   totolPrice: 699
-          // },
           
         ],
     }
@@ -130,9 +112,18 @@ export default {
 
 <style>
 .btn {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center; */
+  display: block;
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
+
 </style>

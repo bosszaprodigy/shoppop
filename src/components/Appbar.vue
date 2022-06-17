@@ -4,7 +4,6 @@
       <v-row no-gutters style="flex-wrap: nowrap;">
         <v-col cols="1">
           <h1 @click="goToHome()" class="text-h4 align-center">Book</h1>
-          <!-- <v-btn @click="goToHome()" class="text-h4 align-center" text>Book</v-btn> -->
         </v-col>
         <v-col class="flex-grow-1 align-self-center justify-center">
           <v-row  outlined tile v-if="hideSearch == false">
@@ -17,20 +16,13 @@
               <v-responsive max-width="850">
                 <v-text-field dense flat hide-details rounded solo-inverted clearable></v-text-field>
               </v-responsive>
-              <!-- <v-btn @click="closeSearch()"> x </v-btn> -->
           </row>
         </v-col>
         <v-col cols="2" class="flex-grow-0 flex-shrink-1 ">
-          <!-- <v-card class="pa-2" outlined tile>
-            I'm 5 column wide and I shrink if there's not enough space
-          </v-card> -->
           <row class="ma-6">
             <v-btn icon @click="hideSearch = !hideSearch">
-              <!-- <v-icon @click="search()">mdi-magnify</v-icon>  -->
               <v-icon>{{ !hideSearch ? 'mdi-magnify' : 'mdi-close' }}</v-icon>
             </v-btn>
-            <!-- <v-btn v-if="hideSearch == true" @click="closeSearch()"> x </v-btn> -->
-            <!-- <div class="text-center"> -->
               <v-menu offset-y transition="scale-transition" class="posutionMenu">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn icon v-bind="attrs" v-on="on">
@@ -101,7 +93,6 @@
                   </v-list-item>
                 </v-list>
               </v-menu>
-            <!-- </div> -->
             <v-btn icon>
               <v-avatar size="2.2rem">
                 <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John">
@@ -120,9 +111,6 @@ export default {
   name: "Appbar",
   props: [
   ],
-  // computed: {
-  //   ...sync("*"),
-  // },
   data() {
     return {
       headerBackgroundImage,
@@ -132,16 +120,9 @@ export default {
     }
   },
   async created() {
-    // await this.getTimeFromDiff()
+
   },
   methods: {
-    search(){ 
-      // this.hideSearch = true
-      this.hideSearch = ! this.hideSearch
-    },
-    closeSearch(){
-      this.hideSearch = false
-    },
     goToBusket(){
       this.$router.push('/busket')
     },
@@ -159,12 +140,20 @@ export default {
 
 <style scoped>
 .btn {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0;
-  justify-items: center;
+  justify-items: center; */
+  display: block;
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 h1 {
   cursor: pointer;

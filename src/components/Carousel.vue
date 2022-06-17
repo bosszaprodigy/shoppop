@@ -23,9 +23,6 @@ export default {
   name: "carousel",
   props: [
   ],
-  // computed: {
-  //   ...sync("*"),
-  // },
   data() {
     return {
       model: 0,
@@ -39,7 +36,6 @@ export default {
     }
   },
   async created() {
-    // await this.getTimeFromDiff()
   },
   methods: {
     

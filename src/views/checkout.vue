@@ -1,6 +1,5 @@
 <template>
   <v-container>
-    <!-- <h2>Checkout</h2> -->
     <v-row>
       <!-- from -->
       <v-col>
@@ -171,10 +170,6 @@
                   </div>
                 </v-radio-group>
             </v-row>
-
-
-
-
           </v-container>
         </v-form>
       </v-col>
@@ -198,7 +193,7 @@
             <v-card-actions>
                 <v-btn class="btn" rounded color="primary" @click="goToCheckout()">
                   <v-icon dark left>mdi-lock</v-icon>
-                    ไปชำระเงิน
+                    ชำระเงิน
                 </v-btn>
             </v-card-actions>
           </v-card>
@@ -242,12 +237,20 @@ export default {
 
 <style>
 .btn {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 0;
-  justify-items: center;
+  justify-items: center; */
+  display: block;
+  width: 100%;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .border {
   border: 1px solid gray;

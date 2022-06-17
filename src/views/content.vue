@@ -11,15 +11,11 @@
 export default {
   name: "Content",
   components: {
-   
     Carousel: () => import("@/components/Carousel"),
     CarouselItem: () => import("@/components/CarouselItem"),
   },
   props: [
   ],
-  // computed: {
-  //   ...sync("*"),
-  // },
   data() {
     return {
     

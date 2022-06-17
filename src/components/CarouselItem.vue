@@ -7,23 +7,20 @@
         </v-row>
       </v-col>
           <v-slide-group v-model="model" class="pa-2" show-arrows>
-            <v-slide-item v-for="n in datas" :key="n">
+            <v-slide-item v-for="n in datas" :key="n.id">
               <v-hover v-slot="{ hover }">
                 <v-card class="justify-center ma-4" height="350" width="260" :class="{ 'on-hover': hover }">
                   <div class="green--text"><v-icon class="green--text">mdi-checkbox-marked-circle</v-icon>มีสินค้า</div>
                   <v-row class="fill-height" align="center" justify="center">
                     <v-container class="ma-3">
-                      <col class="justify-center">
+
                         <row class="center">
                           <v-img height="150" width="100" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" ></v-img>
                         </row>
                         <div class="centerButton" v-if="hover">
                           <v-btn @click="goToDashboard()" :class="{ 'show-btns': hover }" rounded outlined color="indigo" small>เพิ่มลงในตะกร้า</v-btn>
                         </div>
-                      </col>
-                          <!-- margin-left: 50px;
-                          margin-top: 5px; -->
-                      <col>
+
                         <v-row style="margin-top: 10px;" class="ma-1">
                           <v-rating :value="n.rate" color="amber" dense half-increments readonly size="14"></v-rating>
                           <div class="grey--text ms-4">{{n.rate}}</div>
@@ -31,7 +28,7 @@
                         <v-row class="ma-auto">
                           <p class="subtitle-1">{{n.text}}</p>
                         </v-row>
-                      </col>
+
                       <v-col>
                         <v-row>
                           <div class="text-decoration-line-through text-subtitle-2">THB{{n.price}}</div>
@@ -55,9 +52,6 @@
 <script>
 export default {
 name: "CarouselItem",
-  // props: {
-  //   textHeader: String,
-  // },
   props: ['textHeader'],
   data() {
     return {
@@ -69,10 +63,10 @@ name: "CarouselItem",
         'red',
         'orange',
       ],
-      // textHeader:"สินค้าขายดี",
       valuerate: 0,
       datas: [
         {
+          id: 1,
           text: 'รสชาติของผลไม้ที่ยังไม่สุกงอม',
           img: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
           price: 599,
@@ -80,6 +74,7 @@ name: "CarouselItem",
           rate: 4
         },
         {
+          id: 2,
           text: 'รสชาติของผลไม้ที่ยังไม่สุกงอม',
           img: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
           price: 399,
@@ -87,6 +82,7 @@ name: "CarouselItem",
           rate: 3.5
         },
         {
+          id: 3,
           text: 'รสชาติของผลไม้ที่ยังไม่สุกงอม',
           img: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
           price: 799,
@@ -94,6 +90,7 @@ name: "CarouselItem",
           rate: 2
         },
         {
+          id: 4,
           text: 'รสชาติของผลไม้ที่ยังไม่สุกงอม',
           img: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
           price: 199,
@@ -101,6 +98,7 @@ name: "CarouselItem",
           rate: 2.5
         },
         {
+          id: 5,
           text: 'รสชาติของผลไม้ที่ยังไม่สุกงอม',
           img: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
           price: 799,
@@ -108,6 +106,7 @@ name: "CarouselItem",
           rate: 3
         },
         {
+          id: 6,
           text: 'รสชาติของผลไม้ที่ยังไม่สุกงอม',
           img: "https://cdn.vuetifyjs.com/images/cards/cooking.png",
           price: 199,
@@ -118,8 +117,7 @@ name: "CarouselItem",
     }
   },
   async created() {
-    // await this.getTimeFromDiff()
-    // console.log('props :>> ', this.textHeader);
+
   },
   methods: {
     goToDashboard() {

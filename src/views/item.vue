@@ -85,11 +85,9 @@
         <v-tabs v-model="tab">
           <v-tab>เกี่ยวกับสินค้า</v-tab>
           <v-tab>รายละเอียด</v-tab>
-          <!-- <v-tab>Item Three</v-tab> -->
           <v-tabs-items v-model="tab">
             <v-tab-item v-for="item in dataTab" :key="item.id">
               <v-card color="basil" flat>
-                <!-- <h4>รายละเอียด:</h4> -->
                 <v-card-text class="text-subtitle-1">รายละเอียด: </v-card-text>
                 <v-card-text>{{ textTest }}</v-card-text>
               </v-card>
@@ -113,12 +111,9 @@ export default {
   components: {
     CarouselItem: () => import("@/components/CarouselItem"),
   },
-  // computed: {
-  //   ...sync("*"),
-  // },
   data() {
     return {
-      // headerBackgroundImage,
+
       time: null,
       searchItem: "",
       hideSearch: false,
@@ -153,7 +148,7 @@ export default {
     }
   },
   async created() {
-    // console.log('item :>> ');
+
   },
   methods: {
     
